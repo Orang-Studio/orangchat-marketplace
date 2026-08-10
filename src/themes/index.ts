@@ -20,6 +20,3 @@ for (const t of THEMES) {
   if (seen.has(t.id)) throw new Error(`Duplicate theme id: ${t.id}`);
   seen.add(t.id);
 }
-
-export const themeById = (id: string): Theme | undefined =>
-  THEMES.find((t) => t.id === id);

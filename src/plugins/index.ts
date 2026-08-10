@@ -8,10 +8,11 @@ import type { Plugin } from "./api";
 import biggerEmoji from "./bigger-emoji";
 import customAccent from "./custom-accent";
 import hideScrollbars from "./hide-scrollbars";
+import messageTools from "./message-tools";
 
 export * from "./api";
 
-export const PLUGINS: Plugin[] = [hideScrollbars, biggerEmoji, customAccent];
+export const PLUGINS: Plugin[] = [hideScrollbars, biggerEmoji, customAccent, messageTools];
 
 // Ids must be unique - two plugins sharing one would collide in storage. Caught
 // at module load so a bad merge fails loudly in dev, not silently in the field.
@@ -21,5 +22,4 @@ for (const p of PLUGINS) {
   seen.add(p.id);
 }
 
-export const pluginById = (id: string): Plugin | undefined =>
-  PLUGINS.find((p) => p.id === id);
+export const pluginById = (id: string): Plugin | undefined => PLUGINS.find((p) => p.id === id);

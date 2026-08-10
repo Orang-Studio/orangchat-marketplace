@@ -19,6 +19,3 @@ for (const t of PROFILE_THEMES) {
   if (seen.has(t.id)) throw new Error(`Duplicate profile theme id: ${t.id}`);
   seen.add(t.id);
 }
-
-export const profileThemeById = (id: string): ProfileTheme | undefined =>
-  PROFILE_THEMES.find((t) => t.id === id);

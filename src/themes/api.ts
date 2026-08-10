@@ -40,26 +40,3 @@ export interface Theme {
   /** Token -> colour. Values must be plain colours (hex or rgb/hsl()). */
   vars: Partial<Record<ThemeVar, string>>;
 }
-
-/** The full set of allow-listed variable names, for validation at the edges. */
-export const THEME_VARS: ThemeVar[] = [
-  "--oc-surface-0",
-  "--oc-surface-1",
-  "--oc-surface-2",
-  "--oc-surface-3",
-  "--oc-surface-4",
-  "--oc-border",
-  "--oc-border-strong",
-  "--oc-ink",
-  "--oc-ink-secondary",
-  "--oc-ink-muted",
-  "--oc-ink-on-primary",
-  "--oc-primary",
-  "--oc-primary-hover",
-  "--oc-primary-active",
-  "--oc-primary-soft",
-  "--oc-success",
-  "--oc-warning",
-  "--oc-danger",
-  "--oc-info",
-];
